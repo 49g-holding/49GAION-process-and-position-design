@@ -42,6 +42,8 @@ The writing repository of **`[ORG]AIOC-PPD`, Process and Position Design**: the 
 
 ## Checks
 
+**The Protocol pin.** The checks read `49GAION-protocol` at the commit in `PROTOCOL-PIN` (its schemas and its `no-org-names` scanner), never at `main`, so a change in the Protocol changes nothing here until this repository moves the pin by pull request.
+
 ```
 python3 tools/make_cards.py <49GAION-protocol>/spec/schemas
 python3 tools/check_contracts.py --design-return <49GAION-protocol at the commit pinned in contracts/PINS.json>/library/contracts/design-return.schema.json
