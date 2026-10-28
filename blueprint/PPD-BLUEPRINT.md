@@ -7,7 +7,7 @@ blueprint:
   organisation: "<organisation>"          # filled in each organisation's own copy
   type: "specialised"
   org_aion: "[ORG]AION"
-  blueprint_version: "v0.5.1"
+  blueprint_version: "v0.5.2"
   status: "draft"
   template:
     name: "49GAION AIOC Blueprint Template"
@@ -25,7 +25,7 @@ blueprint:
     functional: ["Release Intake and Returns", "Needs Requests", "Process Architecture", "Process Writing", "Position Shaping", "Structure", "Workload", "Operational Walkthrough", "Independent Review", "Decision Package and Release", "Returns from Delivery and Implementation"]
 ```
 
-# Blueprint · `[ORG]AIOC-PPD` · Process and Position Design · `v0.5.1`
+# Blueprint · `[ORG]AIOC-PPD` · Process and Position Design · `v0.5.2`
 
 **Draft, 15 October 2026; v0.4.0, 16 October 2026, connects the chain on both sides (`decisions/DR-0004`): every return to the Target Operating Model now follows the Library's design return contract and always ends; each decided release is announced to Delivery and Implementation directly, and its returns come back here and end in the same way. v0.5.0, 16 October 2026, reads what the TOM release now also states (`decisions/DR-0005`; TOM blueprint `v0.6.0`, Annex H): the objectives cascade starts from its strategy frame; the critical value streams are designed first; work delivered outside becomes a hand-off, never an in-house process; today's activity profile is read for workload; priority orders the work. v0.5.1, 19 October 2026: the Chief of Staff takes its COS code `[ORG]CELL-COSPPD` (`decisions/DR-0006`).** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001` to `decisions/DR-0005`. This is the first blueprint of Process and Position Design, written for any organisation as the mother text of the Library part 49GAION Process and Position Design (Protocol §17). Every rule rests on a 49GAION text, on the blueprint of `[ORG]AIOC-TOM` (cited by section and version), or is new here and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
 
@@ -96,7 +96,7 @@ blueprint:
 | Made from | the Library part 49GAION Process and Position Design, part card `v2` (DRAFT), and Protocol §17, items 1 to 11, merged on 15 October 2026 (`decisions/DR-0001`; `49GAION/DR-0014`, `DR-0018`) |
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `e89ed1d` (with the `v1.6.0` additions: mechanism register and Reserve, checks that are not fixed tests, the added Configuration rows, position codes only) |
 | Mother | 49GAION Process and Position Design, part card `v2`. This text is its mother blueprint |
-| Blueprint version and status | `v0.5.1` · draft |
+| Blueprint version and status | `v0.5.2` · draft |
 | Accountable seat (`[ORG]HOAC-ACS`) | the PPD Design Lead, `[ORG]CELL-PDL`, a HOAC position. Who holds it is the organisation's own mechanism, outside the system; this AIOC never sees it (Standard §1.1, item 9) |
 | Reports to | the Cell carrying `[ORG]HOAC-TM` |
 | Writing repository | `<org>aioc-ppd`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch a Strictly confidential source (Naming Standard R9). The mother text lives in a public repository and holds no organisation data |
@@ -119,7 +119,7 @@ card:
   inner_units: ["[ORG]CELL-PDL", "[ORG]CELL-COSPPD", "[ORG]POD-PRI", "[ORG]POD-PA", "[ORG]POD-PPW", "[ORG]POD-PPS", "[ORG]POD-PS", "[ORG]POD-PW", "[ORG]POD-PR"]
   type: "specialised"
   org_aion: "[ORG]AION"
-  card_version: "v0.5.1"
+  card_version: "v0.5.2"
   input_door: "Chief of Staff"
   wake: { method: "queue", verified: false }
   receives:
@@ -173,7 +173,7 @@ card:
   anatomy:
     panel: { health: { tests: true, metrics: ["stuck", "returned", "late", "run state", "returns open", "returns answered", "returns from DI open", "returns past deadline", "return round", "needs open", "needs past deadline", "processes by state", "positions by state", "assumptions open", "reviews held", "review budget used"] } }
     back_office: { converses_with_humans: false, hosts: ["Chief of Staff", "Office"], protocol_traffic: true }
-    definition: { location: "<org>aioc-ppd, blueprint/PPD-BLUEPRINT.md", version: "v0.5.1" }
+    definition: { location: "<org>aioc-ppd, blueprint/PPD-BLUEPRINT.md", version: "v0.5.2" }
     delivery: { rollback: "one-click" }
     connectors:
       - { role: "operating model source", connector: "[ORG]AIOC-TOM release port", access_managed_in: "panel" }   # the grant is signed at the tool gateway as connect-external-port (Protocol §17, item 8)
@@ -181,10 +181,10 @@ card:
       - { role: "next design stage", connector: "[ORG]AIOC-DI input port: release notices out, returns in", access_managed_in: "panel" }   # signed by the [ORG]HOAC-ACS position over this AIOC (Protocol §20, item 9; H-16)
     gateway: { metering_id: "<per-AIOC metering id>" }
   full_name: "Process and Position Design"
-  version: "0.5.1"
-  lineage: { id: "[ORG]AIOC-PPD", version: "0.5.1", relation: "original" }
+  version: "0.5.2"
+  lineage: { id: "[ORG]AIOC-PPD", version: "0.5.2", relation: "original" }
   lifecycle_state: "designed"
-  blueprint_version: "v0.5.1"
+  blueprint_version: "v0.5.2"
   template_version: "v1.5.0"
   accountable_to: "[ORG]CELL-TMS"         # example code of the Cell carrying [ORG]HOAC-TM (Naming Standard R15); never a Cell inside this AIOC
   top_cell: "[ORG]CELL-PDL"
@@ -900,7 +900,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | H-12 | Inside a run: rule on contested `MATERIAL` findings; accept a reduced level within H-08; approve a second run; attest T0 to T8 | the PPD Design Lead | none taken; the step waits |
 | H-13 | Create `<org>aioc-ppd-records` and `-records-restricted`, recorded first (Naming Standard R9) | the Cell carrying `[ORG]HOAC-TM` | before the first run |
 | H-14 | Send the drafts of `upstream/` to 49GAION or to the parts they concern | GOV | after this blueprint is approved |
-| H-15 | Approve this blueprint `v0.5.1` as the design of `[ORG]AIOC-PPD` | the human hub | it stays a draft; nothing is installed |
+| H-15 | Approve this blueprint `v0.5.2` as the design of `[ORG]AIOC-PPD` | the human hub | it stays a draft; nothing is installed |
 | H-16 | The connection with `[ORG]AIOC-DI` (release notices out; returns in, and their answers) (`connect-external-port`), its widening (`grant-or-widen-access`) and its revocation | the `[ORG]HOAC-ACS` position over this AIOC (the PPD Design Lead's) | none: no notice is sent and no return is received; this AIOC stands alone |
 | H-17 | `return_round_deadline` and `return_rounds_max` (§15) | the Cell carrying `[ORG]HOAC-TM` | none: must be set; until set, every admitted return from DI goes straight to the Requesting Authority with two rows |
 | H-18 | Each row on a return, both ways: for a return from DI (§5.11), open a new run, answer by decision, or set aside on a stated basis; for a return this AIOC sent to TOM, the same rows reach the Requesting Authority through TOM | Requesting Authority | undecided; past its deadline, escalated |
@@ -918,6 +918,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | v0.4.0 | 2026-10-16 | Connects the chain on both sides (`decisions/DR-0004`; `49GAION/DR-0016`, `DR-0017`, `DR-0018`): returns to TOM follow the Library's design return contract, pinned in `contracts/PINS.json`, count their rounds and always end, and an element of a return set aside goes forward on its stated basis, listed in the release (§5.1; Annex B.1); this AIOC's own `release-return` contract is superseded by the Library's; each decided PPD Release is announced to `[ORG]AIOC-DI` by a release notice (`contracts/release-notice.schema.json`); DI's returns are received and carried to an end (§5.11, new); slots `return_round_deadline` and `return_rounds_max`; H-16 to H-19; the mother is part card `v2`; the TOM rules are carried from the TOM blueprint `v0.5.0`. TEST-PPD v2: cases 98 to 104 and PDL-6, case 27 struck; the Library's v2 cases mapped (§9). Supersedes `v0.3.0` | v1.5.0 at `e89ed1d` | this pull request |
 | v0.5.0 | 2026-10-16 | Reads what the TOM release now also states (`decisions/DR-0005`; TOM blueprint `v0.6.0`, Annex H); removes nothing. The release-reading record covers the strategy frame, journeys, value case and activity profile (§5.1 rule 2); critical value streams join the critical-process proposal and priority orders it (§5.3 rule 5); a capability delivered outside becomes a hand-off with oversight steps (§5.3 rule 8); journeys and maturity checked (§5.3 rules 9, 10); the objectives cascade starts from the strategy frame (§5.5 rule 11; A.12); today's activity profile beside the designed workload (§5.7 rule 7; A.9); priority carried into the release (§5.10 rule 9; A.2); Annex D items 20 and 21; Annex E pins TOM `v0.6.0`. TEST-PPD v3 (cases 105–111) | v1.5.0 | this pull request |
 | v0.5.1 | 2026-10-19 | The Chief of Staff takes its COS code: `[ORG]CELL-PCS` → `[ORG]CELL-COSPPD` (Naming Standard R16, `49GAION/DR-0028`; `decisions/DR-0006`). The old code is retired and kept in the card's lineage; the part test is renamed; nothing else changes | v1.5.0 | this repository's pull request for this version |
+| v0.5.2 | 2026-10-29 | Released on the governing seat's word (`decisions/DR-0009`): it carries the records since v0.5.1, `decisions/DR-0007`, `decisions/DR-0008`; positions only (`49GAION/DR-0048`, `DR-0049`). Every card takes v0.5.2; the Protocol pin moves to the Operating Protocol `v2.1.0`. No other rule changes. |
 
 ---
 
@@ -987,7 +988,7 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 parts:
   defaults:
     accountable_to: "[ORG]CELL-PDL"
-    card_version: "v0.5.1"
+    card_version: "v0.5.2"
     version: "0.3.0"
     lifecycle_state: "designed"
     test_version: "v3"
