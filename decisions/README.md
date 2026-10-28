@@ -13,5 +13,6 @@ One `DR-####` file per decided subject, numbered in order. A record file never c
 | [`DR-0005`](DR-0005-reading-what-tom-also-states.md) | 2026-10-16 | Reading what the TOM release also states | in force |
 | [`DR-0006`](DR-0006-ppd-v0-5-1-cos-code.md) | 2026-10-19 | PPD v0.5.1: the Chief of Staff takes its COS code | in force |
 | [`DR-0007`](DR-0007-the-mother-repository-and-the-readings.md) | 2026-10-25 | The mother repository of 49GAION Process and Position Design, and the readings of `49GAION/DR-0041` and `DR-0042` | in force on merge |
+| [`DR-0008`](DR-0008-positions-only.md) | 2026-10-28 | Process and Position Design mother: positions only, brought into line with 49GAION/DR-0048 and DR-0049 | in force on merge |
 
 *Powered by 49GAION*
