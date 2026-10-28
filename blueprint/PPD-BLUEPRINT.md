@@ -97,7 +97,7 @@ blueprint:
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `e89ed1d` (with the `v1.6.0` additions: mechanism register and Reserve, checks that are not fixed tests, the added Configuration rows, position codes only) |
 | Mother | 49GAION Process and Position Design, part card `v2`. This text is its mother blueprint |
 | Blueprint version and status | `v0.5.1` · draft |
-| Accountable seat (`[ORG]HOAC-ACS`) | the PPD Design Lead, `[ORG]CELL-PDL`, a HOAC position. Who occupies it is top management's own mechanism; this AIOC never sees it (Standard §1.1, item 9) |
+| Accountable seat (`[ORG]HOAC-ACS`) | the PPD Design Lead, `[ORG]CELL-PDL`, a HOAC position. Who holds it is the organisation's own mechanism, outside the system; this AIOC never sees it (Standard §1.1, item 9) |
 | Reports to | the Cell carrying `[ORG]HOAC-TM` |
 | Writing repository | `<org>aioc-ppd`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch a Strictly confidential source (Naming Standard R9). The mother text lives in a public repository and holds no organisation data |
 | Code project | `<org>aioc-ppd`, on the organisation's code platform |
@@ -236,7 +236,7 @@ card:
 
 ### 2.1 Organisation table
 
-The blueprint writes `[ORG]` for the organisation's prefix (Naming Standard R13). Positions only; who occupies each one is top management's own mechanism (Standard §1.1, item 9; §5.2, Position Principle).
+The blueprint writes `[ORG]` for the organisation's prefix (Naming Standard R13). Positions only; who holds each one is the organisation's own mechanism, outside the system (Standard §1.1, item 9; §5.2, Position Principle).
 
 | Term in the blueprint | In `<organisation>` |
 |---|---|
@@ -248,7 +248,7 @@ The blueprint writes `[ORG]` for the organisation's prefix (Naming Standard R13)
 | The builder of every tool | `<filled>` |
 | The Library blueprint this core is made from | 49GAION Process and Position Design, part card `v2`; Protocol §17; this text is its mother blueprint |
 | **The Requesting Authority**: the position that asks for the design and decides it | `<code of the human Cell carrying [ORG]HOAC-GOV>`, or of a human Cell carrying a HOAC label whose `authority_scope`, delegated by that Cell under `delegate-authority`, covers the design decisions of this AIOC (Standard §4.2, items 5 and 8; §4.4, item 8). It is a position, never this AIOC's Design Lead position |
-| **The PPD Design Lead position** | a HOAC position (`[ORG]HOAC-ACS`), a legal persona. Who occupies it is top management's own mechanism; this AIOC never sees it |
+| **The PPD Design Lead position** | a HOAC position (`[ORG]HOAC-ACS`), a legal persona. Who holds it is the organisation's own mechanism, outside the system; this AIOC never sees it |
 | **The operating model source** | `[ORG]AIOC-TOM`: it hands over its decided release directly, and receives this AIOC's returns |
 | **The source of record** | `[ORG]AIOC-SL`: every other source, every question to the organisation, and every filing |
 | **The next stage** | `[ORG]AIOC-DI`: it is told of each decided PPD Release directly, and sends its returns here (§5.11) |
@@ -273,9 +273,9 @@ The blueprint writes `[ORG]` for the organisation's prefix (Naming Standard R13)
 
 ## 3. Positions
 
-| Position (standard title) | Purpose | Reports to | Run today by | Deputy |
+| Position (standard title) | Purpose | Reports to | Run today by | Cover |
 |---|---|---|---|---|
-| PPD Design Lead | the accountable position of this AIOC and the owner of its path: owns the fixed tests of its parts; rules on contested review findings; accepts a reduced review level within the TM Cell's permission; attests the method. Answers for the method, never for the organisation's choices | the Cell carrying `[ORG]HOAC-TM` | a HOAC position (`[ORG]HOAC-ACS`); who occupies it is top management's own mechanism, never seen by this AIOC | as top management arranges (`appoint-acting-filler`, Standard §4.1, item 12) |
+| PPD Design Lead | the accountable position of this AIOC and the owner of its path: owns the fixed tests of its parts; rules on contested review findings; accepts a reduced review level within the TM Cell's permission; attests the method. Answers for the method, never for the organisation's choices | the Cell carrying `[ORG]HOAC-TM` | a HOAC position (`[ORG]HOAC-ACS`); who holds it is the organisation's own mechanism, outside the system, never seen by this AIOC | the organisation's own mechanism, outside the system |
 | Chief of Staff | keep each run moving, honest and traced; the only door to `[ORG]AIOC-TOM` and to Source Lifecycle | PPD Design Lead | an agent (`[ORG]CELL-COSPPD`) | none; the run halts |
 | Release Reader | read the TOM release, account for every element, and draft returns | Chief of Staff | an agent (`[ORG]CELL-PRR`) | none; the step halts |
 | Process Architect | lay out the process architecture and propose the critical processes | Chief of Staff | an agent (`[ORG]CELL-PPA`) | none; the step halts |
@@ -758,7 +758,7 @@ TEST-PPD-COSPPD v3 (cases 101 to 104) and TEST-PPD-PDL v3 (PDL-6) · result `NOT
 | An organisation's run records: Input Pack versions, drafts, difference registers, review records, ruling sheets, traces | `<org>aioc-ppd-records`; `-records-restricted` for any run record that touches a Strictly confidential source | append-only; referenced from the release manifest by hash |
 | The organisation's sources, the needs answers, the decisions, the filed PPD Release and the filed returns | `[ORG]AIOC-SL` | Source Lifecycle is the only home of a source |
 | The TOM Release | `[ORG]AIOC-TOM`, filed in `[ORG]AIOC-SL` | read by reference and hash, never copied |
-| The link between positions and whoever occupies them | not here: top management's own mechanism (Standard §1.1, item 9) | never in this AIOC |
+| The link between positions and whoever holds them | not here: the organisation's own mechanism, outside the system (Standard §1.1, item 9) | never in this AIOC |
 | Work Items | the shared queue | Protocol §2 |
 
 - **References, not copies.** Atom text and release text are held only in the run workspace. Records store IDs and hashes.
@@ -887,7 +887,7 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | ID | Decision | Seat | Default |
 |---|---|---|---|
 | H-01 | Name the Requesting Authority's Cell: the GOV Cell itself, or a human Cell to which it delegates the design decisions (`delegate-authority`) | GOV | none: T0 fails |
-| H-02 | **Top management's own mechanism.** Arrange the PPD Design Lead position and any HOAC position added to this AIOC. Nothing of who occupies them enters this blueprint | the Cell carrying `[ORG]HOAC-TM` | the position is vacant: the AIOC does not join |
+| H-02 | **The organisation's own mechanism.** Who holds the PPD Design Lead position and any HOAC position added to this AIOC, and how, is decided outside the system (`49GAION/DR-0048`, `DR-0049`). Nothing of it enters this blueprint | the organisation's own mechanism, outside the system | the position is empty: the AIOC does not join |
 | H-03 | Install `[ORG]AIOC-PPD` (`create-or-install-unit`); its `change-parent`; its `restart-stopped-unit` | the Cell carrying `[ORG]HOAC-TM` | none |
 | H-04 | Accept the TOM changes that let this AIOC read releases directly and send returns (`upstream/PROPOSALS.md`, item 1; made in the TOM blueprint `v0.5.0`) | the Cell carrying `[ORG]HOAC-TM`, made through OCO | required before joining |
 | H-05 | Accept the Source Lifecycle origin kind `process and position design` and this AIOC's filing scope (`upstream/PROPOSALS.md`, item 2) | the Cell carrying `[ORG]HOAC-TM`, made through OCO | required before joining |
@@ -1005,7 +1005,7 @@ parts:
       accountable_to: "[ORG]CELL-TMS"       # example code of the Cell carrying [ORG]HOAC-TM
       entity: "<entity>"
       authority_scope:
-        decision_types: ["change-fixed-test-or-threshold", "create-or-install-unit", "change-filler", "retire-unit", "restart-stopped-unit", "appoint-acting-filler"]
+        decision_types: ["change-fixed-test-or-threshold", "create-or-install-unit", "change-filler", "retire-unit", "restart-stopped-unit"]
         entity: "<entity>"
         expires: "2027-10-15"                # placeholder; each organisation sets it
         authority: "delegated"

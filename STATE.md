@@ -10,7 +10,7 @@
 | Unit cards | 24 Pod and Cell cards, generated from blueprint §17. `tools/make_cards.py` against `49GAION-protocol` `spec/schemas` on main, 19 October 2026: **0 errors** |
 | Bot identity cards | 16, one for each AI Cell; none signs; no shared credential; **0 errors** |
 | Contracts | `contracts/release-notice.schema.json`: 2 valid and 5 must-fail examples; 4 return examples valid against the Library's design return contract at the pinned commit; `tools/check_contracts.py --design-return`, 16 October 2026: **0 failures** |
-| HOAC positions | one, the PPD Design Lead (`[ORG]HOAC-ACS`); more may be added in this AIOC's design (blueprint §17). Who occupies it is top management's own mechanism |
+| HOAC positions | one, the PPD Design Lead (`[ORG]HOAC-ACS`); more may be added in this AIOC's design (blueprint §17). Who holds it is the organisation's own mechanism, outside the system |
 | Joining | blocked: needs the Source Lifecycle origin kind (`upstream/PROPOSALS.md`, item 2) and the TOM blueprint `v0.5.0` installed; the card's claims have not passed fixed samples |
 | Links | to `[ORG]AIOC-TOM` (release notices in; returns out); to `[ORG]AIOC-DI` (release notices out; returns in), signed by this AIOC's `[ORG]HOAC-ACS` position (H-16); without the DI link this AIOC stands alone |
 | Installed in any `[ORG]AION` | no |

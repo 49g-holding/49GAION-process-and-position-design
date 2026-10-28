@@ -4,6 +4,8 @@ The mother repository of the Library part **49GAION Process and Position Design*
 
 > **Reading (49GAION DR-0041, DR-0042).** The complete definition of 49GAION, approved by its governing seat on 25 October 2026, is `49GAION-FRAMEWORK.md` in `github.com/49g-holding/49GAION`, with the clarifications of the same day. Where this repository differs from it, the definition governs, and this text is read with it. This part designs an organisation of human positions; how human and how much AI the organisation is, is the `[ORG]AION`'s own design work, prepared by it and decided by the governance seat. Every rule here that names `[ORG]AIOC-OCO` or the human hub reads as the Top Management Group, the hub of the operation, human and AI. The panel is the organisation's own code interface, and the AI chat workspace is its back office. The readings are in [`decisions/DR-0007`](decisions/DR-0007-the-mother-repository-and-the-readings.md). Nothing here is removed.
 
+> **Reading (49GAION DR-0048, DR-0049; `decisions/DR-0008`).** Only AIOCs and HOAC positions: every human place here is a position, and who holds it, and how, is the organisation's own mechanism, outside the system. The acting filler, deputies of human seats and `appoint-acting-filler` are withdrawn.
+
 > **Process and Position Design in one page**
 >
 > Process and Position Design (PPD) takes an organisation's decided target operating model and designs how its work runs and the positions that carry it. It is the stage after the Target Operating Model (TOM), and a part of its own.
