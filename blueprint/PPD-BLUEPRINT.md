@@ -252,7 +252,7 @@ The blueprint writes `[ORG]` for the organisation's prefix (Naming Standard R13)
 | **The operating model source** | `[ORG]AIOC-TOM`: it hands over its decided release directly, and receives this AIOC's returns |
 | **The source of record** | `[ORG]AIOC-SL`: every other source, every question to the organisation, and every filing |
 | **The next stage** | `[ORG]AIOC-DI`: it is told of each decided PPD Release directly, and sends its returns here (§5.11) |
-| **The engine register** | held at the tool gateway, in the Charter (Standard §4.4, item 11); read by this AIOC as `[ORG]AIOC-TOM` reads it (TOM blueprint `v0.5.0`, Annex E.12) |
+| **The engine register** | held at the tool gateway, which is carried by the Charter and run as code beside the core, outside the reach of every AI (Standard §4.4, item 11; `49GAION/DR-0052`); read by this AIOC as `[ORG]AIOC-TOM` reads it (TOM blueprint `v0.6.0`, Annex E.12) |
 
 ### 2.2 Placement
 
@@ -866,7 +866,7 @@ The cases are written in `tests/TEST-PPD.md` (v3). Cases 1 to 22 are the Library
 1. **The Chief of Staff never asks the organisation's people anything.** It reaches the organisation only through the Chief of Staff of `[ORG]AIOC-SL`. Reason: as for `[ORG]AIOC-TOM` (its §11, item 1); a design rests on recorded sources, never on words spoken to the designer.
 2. **The Back office does not converse with humans** (`converses_with_humans: false`). Reason: as in item 1.
 3. **Two operating sources.** The template's Input socket takes sources. This one also takes a design release directly from another AIOC, by reference and hash, and returns defects to it. Reason: the direction of the governing seat that this AIOC is linked to the TOM itself (`decisions/DR-0001`; Protocol §17, items 2 and 3).
-4. **Rules carried by reference.** The Review Panel rule, the two-author rule, labels, decision rules and the receiving end of returns are carried from the TOM blueprint `v0.5.0` by section, not restated. A change there reaches this AIOC only when this blueprint pins the new version (Annex E).
+4. **Rules carried by reference.** The Review Panel rule, the two-author rule, labels, decision rules and the receiving end of returns are carried from the TOM blueprint `v0.6.0` by section, not restated. A change there reaches this AIOC only when this blueprint pins the new version (Annex E).
 
 ## 12. Lessons and proposals to the mother
 
