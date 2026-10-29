@@ -22,7 +22,7 @@ The mother repository of the Library part **49GAION Process and Position Design*
 
 The writing repository of **`[ORG]AIOC-PPD`, Process and Position Design**: the mother text of the 49GAION Library part of the same name (49GAION Operating Protocol §17 and Standard §3.1, item 3, both proposed on 15 October 2026). In each organisation this repository is named `<org>aioc-ppd` (Naming Standard R9). It is written for any organisation and holds no organisation data.
 
-**Status: draft `v0.5.2`, 29 October 2026: the release of the records since `v0.5.1`, positions only among them (`decisions/DR-0009`); `v0.5.1`, 19 October 2026: the Chief of Staff takes its COS code `[ORG]CELL-COSPPD` (`decisions/DR-0006`); it builds on `v0.5.0`, 16 October 2026: the chain connected on both sides (`decisions/DR-0004`); reads what the TOM release also states (`decisions/DR-0005`). Nothing here has run; every fixed test reads `NOT_RUN`.**
+**Status: draft `v0.5.3`, 29 October 2026: corrections under `49GAION/DR-0052` (`decisions/DR-0010`); `v0.5.2`, 29 October 2026: the release of the records since `v0.5.1`, positions only among them (`decisions/DR-0009`); `v0.5.1`, 19 October 2026: the Chief of Staff takes its COS code `[ORG]CELL-COSPPD` (`decisions/DR-0006`); it builds on `v0.5.0`, 16 October 2026: the chain connected on both sides (`decisions/DR-0004`); reads what the TOM release also states (`decisions/DR-0005`). Nothing here has run; every fixed test reads `NOT_RUN`.**
 
 ## Where to read
 
@@ -55,7 +55,7 @@ Both must report 0 errors and 0 failures.
 
 ## How a change is made
 
-A change is a pull request, reviewed by someone other than its writer. A decided text is never edited; a change is a new version that names what it supersedes.
+A change is a pull request, reviewed by a party other than its writer. A decided text is never edited; a change is a new version that names what it supersedes.
 
 ## Owner and licence
 
